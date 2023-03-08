@@ -1,0 +1,41 @@
+extends ../layout/default
+block content
+    body
+        // Hidden input that stores the landlord's id
+        input#landlord-id(hidden value=user.landlord.id name="landlord-id" readonly)   
+        .p-3.text-center.bg-light 
+            h4 Landlord Dashboard
+            h5.text-start Your listings
+            .container
+                .row#listings-col
+                    .d-flex.p-4.justify-content-center
+                         .spinner-border(role='status')
+                              span.visually-hidden Loading...                  
+                .row.mt-2          
+                    .col
+                        a.btn.btn-outline-dark(href="/listing/post") Post a listing                                 
+
+            
+          
+            //- br
+            //- h4.text-start Reviews
+            //- .container
+            //-     .row
+                   
+                    //- each user in review
+                    //-     .col-sm-12.col-md-3
+                    //-         .card.h-100.text-start
+                    //-             .card-body
+                    //-                 h5.card-title=user.title
+                    //-                 img.card-img-top(src=user.image)
+                    //-                 small.card-text.text-muted Rating:
+                    //-                 p.card-text=user.rating
+
+                    //-                 br
+
+                    //-                 small.card-text.text-muted Description:
+                    //-                 p.card-text=user.description
+                    //-                 .card-body
+                    //-                 p.card-text=user.info
+                        
+    script(type="text/javascript" src="/javascripts/landlord-dashboard.js")

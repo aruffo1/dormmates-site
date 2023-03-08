@@ -1,0 +1,47 @@
+extends ../layout/default 
+block content 
+    body
+        .container.mt-5 
+            h1.text-center Profile
+            .row 
+                .col.p-5 
+                    .avatar-img 
+                        img.rounded.w-50(src=user.photo || "/images/match.svg" height="150px")
+
+                .col.p-5 
+                    .profile-info 
+                        h2=user.name 
+                        if user.student
+                            h4=user.student.institutionName
+                        else
+                            h4 Landlord
+                        h4=user.emailAddress
+                        h4=user.gender
+                        br
+                        //- a.btn.btn-primary.mx-2(href="/chat" type='button') Send Message
+                        //- a.btn.btn-secondary.mx-2(href="/editprofile" type='button') Edit Profile
+            
+            if user.student
+                hr
+                .row
+                    //- .col.p-1.ms-5
+                    //-     .profile-bio
+                    //-         h4 Biography 
+                    //-         p=user.biography 
+                    .col.p-1.ms-5
+                        .questionnaire-schedule 
+                            h4 Schedule
+                            p=user.student.schedule
+                    .col.p-1.ms-5
+                        .questionnaire-personality 
+                            h4 Personality
+                            p=user.student.personality
+                    .col.p-1.ms-5
+                        .questionnaire-hobby 
+                            h4 Hobby
+                            p=user.student.hobby1
+                    .col.p-1.ms-5
+                        .questionnaire-major 
+                            h4 Major
+                            p=user.student.major
+

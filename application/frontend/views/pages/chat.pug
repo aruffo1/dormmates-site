@@ -1,0 +1,40 @@
+extends ../layout/default 
+block content 
+    body
+        .container.mt-5
+            h3.p-4.text-center Chat
+            .row
+                .col
+                    .inbox-contents.bg-light.border.rounded
+                        h4.text-center Inbox
+                        .inbox-users
+                            .col.d-flex.border.inbox-contents
+                                img.rounded-circle.profile-img(src='/images/meeka_profile_photo.jpg' alt='avatar') 
+                                h5.px-3.mb-2 Username
+                            
+                            .col.d-flex.border.inbox-contents
+                                .user-img 
+                                    img.rounded-circle.profile-img(src='...' alt='avatar') 
+                                .user-contents.ml-4 
+                                    h5.px-3.mb-2 Username
+
+                            .col.d-flex.border.inbox-contents
+                                .user-img 
+                                    img.rounded-circle.profile-img(src='...' alt='avatar') 
+                                .user-contents.ml-4 
+                                    h5.px-3.mb-2 Username        
+                            
+                .col.overflow-auto
+                    .recieve-message
+                        .w-50.mb-3
+                            img.rounded-circle.recieve-img(src='/images/meeka_profile_photo.jpg' alt='avatar' width="50")
+                        .bg-light.rounded.py-2.px-3.mb-2.d-flex
+                            p I sent you a message!
+                    .send-message
+                        .mb-3
+                            img.rounded-circle.send-img(src='/images/meeka_profile_photo.jpg' alt='avatar' width="50")
+                        .bg-primary.rounded.py-2.px-3.mb-2.d-flex
+                            p.text-white I sent you a message!
+                    form.message-form
+                        input#message-input.form-control(type='text' placeholder='Type a message' aria-describedby='button-addon2')
+                        button.messsage-btn.border.rounded(type='submit') Send

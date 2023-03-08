@@ -1,0 +1,93 @@
+extends ../layout/default
+block content
+    script(src='/javascripts/register.js')
+    script(src='/javascripts/datepicker.js')
+    
+    #user-type-container.container.mt-5.bg-light
+        .p-4.text-center
+            h4 Are you a student or landlord?
+        .row.text-center
+            .col-sm-6.p-5
+                .card
+                    .card-body
+                        h3.card-title Student
+                        p.card-text I want to find great roommates and verified housing listings!
+                        button#select-student.btn.btn-primary.block Create a new student account
+            .col-sm-6.p-5
+                .card
+                    .card-body
+                        h3.card-title Landlord
+                        p.card-text I want to post my housing listings on DormMates!
+                        button#select-landlord.btn.btn-primary.block Create a new landlord account
+
+    #success-container.container.mt-5(hidden)
+        .p-4.text-center.bg-light 
+            h4 Successfully created Account.
+            a(href='/login') Click here to login.
+
+    #register-container.container.mt-5(hidden)
+        .p-4.text-center.bg-light 
+            h4#user-type-title
+        
+        form#register-form
+
+            //- Stores data we want to submit in the request body but don't
+            //  necessarily want the user to see.
+            input#user-type-input(hidden name="type" readonly required)
+
+            .d-grid.gap-2.col-sm-4.mx-auto.mb-3
+                .form-floating
+                    input#fullName.form-control(type='text' name="name" required)
+                    label.form-label(for='fullName') Name
+                    small.form-text Enter your full name.
+        
+            .d-grid.gap-2.col-sm-4.mx-auto.mb-3
+                .form-floating
+                    input#username.form-control(type='text' name="username" required)
+                    label.form-label(for='username') Username
+            
+            .d-grid.gap-2.col-sm-4.mx-auto.mb-3
+                .form-floating
+                    input#email.form-control(type='email' name="email" required)
+                    label.form-label(for='email') Email Address
+                    small#email-help-text.form-text
+
+            .d-grid.gap-2.col-sm-4.mx-auto.mb-3
+                .form-floating
+                    input#password.form-control(type='password' name="password" required)
+                    label.form-label(for='password') Password
+                    small.form-text Password must have at least 8 characters with at least one uppercase character and one number.
+
+            
+            .d-grid.gap-2.col-sm-4.mx-auto.mb-3
+                .form-floating
+                        input#dob.form-control(type='date' name="dob" required)
+                        label.form-label(for='dob') Birth Date
+                        small.form-text Enter your birth date in the format mm/dd/yyyy.
+
+           
+            .d-grid.gap-2.col-sm-4.mx-auto.mb-3
+                //-   .form-floating
+                label.form-label(for='gender') Gender
+                select#gender.form-control(type="text" name='gender' required)
+                    option(value='male') Male 
+                    option(value='female') Female
+
+            .d-grid.gap-2.col-sm-4.mx-auto.mb-3
+                //- .form-floating
+                label.form-label(for='avatar') Avatar
+                input#avatar.form-control-file(type='file' accept="image/jpeg" multiple="false" name="avatar" required)
+                small.form-text Select a .jpeg or .jpg file.
+
+            .d-grid.gap-2.col-sm-4.mx-auto.mb-3
+                .form-check 
+                    label.form-check-label(for='defaultCheck1') I agree with the Terms of Service
+                    input#defaultCheck1.form-check-input(type='checkbox' value='' required)
+
+            .d-grid.gap-2.col-4.mx-auto.mb-3
+                alert#alert.alert-danger(role='alert' hidden)
+                    strong#alert-message
+                    button.btn(type='button' data-bs-dismiss="alert")
+
+            .d-grid.gap-2.col-4.mx-auto.mb-3
+                button#submit-form-button.btn.btn-primary.bg-primary(href='/' type='submit') Create Account

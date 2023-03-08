@@ -1,0 +1,196 @@
+body {
+    background-color: white;
+    color: black;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+p {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+h1 {
+    font-style: inherit;
+}
+
+.introsearch {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+.searchbar input {
+    height: 30px;
+    margin-top: 15px;
+
+}
+
+
+.searchbar button {
+    margin-top: 20px;
+    width: auto;
+    height: auto;
+    box-sizing: border-box;
+    border: none;
+    color: white;
+    background-color: rgb(138, 152, 190);
+
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: rgb(44, 25, 71);
+    padding-top: 0.15rem;
+    padding-bottom: 0.15rem;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
+}
+
+.navbar-brand {
+    font-family: 'Crete Round', serif;
+    font-size: 30px;
+}
+
+.navbar-register {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.navbar-login {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.navbar a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navlink:hover {
+    opacity: 0.6;
+}
+
+.institution-search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.article-intro {
+    text-align: center;
+}
+
+.homepic {
+    height: 150;
+    width: 150;
+}
+
+.article-intro {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* .card {
+    color: white;
+    background-color: rgb(138, 152, 190);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2); 
+} */
+
+.alert-danger {
+    width: auto;
+    padding: 3px 16px;
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 1px;
+    margin-bottom: 12px;
+    font-size: 16px;
+}
+
+.listingpic {
+    text-align: center;
+}
+
+.profile-img {
+    float: left;
+    height: 50;
+    width: 50;
+}
+
+.inbox-contents {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.recieve-message {
+    margin-bottom: 20px;
+}
+
+.recieve-img {
+    float: left;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-right: 10px;
+}
+
+.send-img {
+    float: right;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: 10px;
+}
+
+.message-form {
+    display: flex;
+    margin-top: 50px;
+}
+
+.avatar-img {
+    text-align: center;
+}
+
+.footer {
+    bottom: 0;
+}
+
+/* #dashboard-card {
+    background-color:#f8f9fa;
+    width: 13rem;
+}
+
+#student-dashboard-card {
+    background-color:#f8f9fa;
+}
+
+#landlord-dashboard-card {
+    background-color:#f8f9fa;
+} */
+
+td {
+    background-color: white;
+    color: black;
+}
+
+/* h5.card-title {
+   
+    background-color: white;
+    color: black;
+} */
+
+.i.fas.fa-mars {
+    font-size: 20px;
+}
+
+#map {
+    height: 100vh;
+}
+
+.white-space {
+    color: #f8f9fa;
+} 
+
+.bg-primary {
+    background-color: #2c1947 !important;
+}

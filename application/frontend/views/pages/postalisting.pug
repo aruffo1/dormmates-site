@@ -1,0 +1,110 @@
+extends ../layout/default
+block content
+
+    body
+        .container.mt-5#success-container(hidden)
+            .p-8.text-center.bg-light 
+                h3 Your listing has been posted!
+                a#listing-link(href='/listing') Click here to view your listing.
+
+        .container.mt-5#post-listing-container
+            .p-4.text-center.bg-light 
+                h4 Post a listing
+            
+            
+            form#post-listing(enctype="multipart/form-data")
+                input#id-field(hidden name="landlordId", value=user.landlord.id readonly)
+                //- .d-grid.gap-2.col-sm-12.col-md-4.mx-auto
+                //-     alert#alert.alert-danger(role='alert' hidden).text-center
+                //-         strong#alert-message
+                //-         button.btn(type='button' data-bs-dismiss="alert")
+                .d-grid.gap-2.col-4.mx-auto.mb-3
+                    .form-floating
+                        input#description.form-control(type='text' name="description" required)
+                        label.form-label(for='description') Description
+                        small.form-text Enter your listing description
+        
+                .d-grid.gap-2.col-sm-4.mx-auto.mb-3
+                    .form-floating
+                        input#price.form-control(type='number' name="price" required)
+                        label.form-label(for='price') Price
+                        small.form-text Enter your listing price
+                
+                .d-grid.gap-2.col-sm-4.mx-auto.mb-3
+                    .form-floating
+                        input#location.form-control(type='text' name="location" required)
+                        label.form-label(for='location') Location
+                        small.form-text Enter your listing's full location (ex: "123 Main St, San Francisco, CA 94102")
+                    //- .form-floating
+                    //-     input#city.form-control(type='text' name="city" required)
+                    //-     label.form-label(for='city') City
+                    //-     small.form-text Enter the city your listing is in
+                    //- .form-floating
+                    //-     input#state.form-control(type='text' name="state" required)
+                    //-     label.form-label(for='state') State
+                    //-     small.form-text Enter the state your listing is in
+                    //- .form-floating
+                    //-     input#zipcode.form-control(type='text' name="zipcode" required)
+                    //-     label.form-label(for='zipcode') Zip Code
+                    //-     small.form-text Enter the zip code your listing is in
+                
+                .amenities-box
+                    .d-grid.col-sm-4.mx-auto
+                        small.form-text Check your listing amenities
+                        .form-check.form-check-inline
+                            input#Dryer.form-check-input(type='checkbox' name="dryer" value='1')
+                            label.form-check-label(for='Dryer')
+                            | Dryer
+                        .form-check.form-check-inline
+                            input#Washer.form-check-input(type='checkbox' name="washer" value='1')
+                            label.form-check-label(for='Washer')
+                            | Washer
+                        .form-check.form-check-inline
+                            input#Whiteboard.form-check-input(type='checkbox' name="whiteboard" value='1')
+                            label.form-check-label(for='Whiteboard')
+                            | Whiteboard
+                        .form-check.form-check-inline
+                            input#Furnished.form-check-input(type='checkbox' name="furnished" value='1')
+                            label.form-check-label(for='Furnished')
+                            | Furnished
+                        .form-check.form-check-inline
+                            input#Patio.form-check-input(type='checkbox' name="patio" value='1')
+                            label.form-check-label(for='Patio')
+                            | Patio
+                        .form-check.form-check-inline
+                            input#Closets.form-check-input(type='checkbox' name="closet" value='1')
+                            label.form-check-label(for='Closets')
+                            | Closet
+                        .form-check.form-check-inline
+                            input#Parking.form-check-input(type='checkbox' name="parking" value='1')
+                            label.form-check-label(for='Parking')
+                            | Parking
+                        .form-check.form-check-inline
+                            input#Kitchen.form-check-input(type='checkbox' name="kitchen" value='1')
+                            label.form-check-label(for='Kitchen')
+                            | Kitchen
+                        .form-check.form-check-inline
+                            input#Bath.form-check-input(type='checkbox' name="bath" value='1')
+                            label.form-check-label(for='Bath')
+                            | Bath
+                        .form-check.form-check-inline
+                            input#LivingRoom.form-check-input(type='checkbox' name="livingroom" value='1')
+                            label.form-check-label(for='LivingRoom')
+                            | Living Room
+                        .form-check.form-check-inline
+                            input#Wifi.form-check-input(type='checkbox' name="wifi" value='1')
+                            label.form-check-label(for='Wifi')
+                            | Wifi
+                        br
+                .d-grid.gap-2.col-sm-4.mx-auto.mb-3
+                    label.form-label(for='photos') Listing Photos
+                    input#photos.form-control-file(type='file' accept="image/jpeg" multiple="true" name="photos" required)
+                    small.form-text Select a .jpeg or .jpg files
+                .d-grid.gap-2.col-sm-12.col-md-4.mx-auto.mb-3
+                    alert#alert.alert-danger(role='alert' hidden).text-center
+                        strong#alert-message
+                        button.btn(type='button' data-bs-dismiss="alert")
+                .d-grid.gap-2.col-sm-12.col-md-4.mx-auto
+                    button#submit-form-button.btn.btn-primary(type='submit') Post Listing
+                    
+    script(src='/javascripts/postalisting.js')

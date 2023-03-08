@@ -1,0 +1,34 @@
+extends ../layout/default
+block content
+    link(rel="stylesheet", href="styles/style.css")
+    body
+        // Hidden input that stores the student's id
+        input#student-id(hidden value=user.student.id name="student-id" readonly)   
+      
+
+        .p-4.text-center
+            h4 Student Dashboard
+            h5.text-start Students near you
+            .container   
+                .row#students-col
+                    .d-flex.p-4.justify-content-center
+                         .spinner-border(role='status')
+                              span.visually-hidden Loading...       
+                .row.mt-4
+                    .col
+                        a.btn.btn-outline-dark(href="/roommates") View more Students
+
+            br 
+            h5.text-start Favorite listings
+            .container
+                .row#favorites-col
+                    .d-flex.p-4.justify-content-center
+                         .spinner-border(role='status')
+                              span.visually-hidden Loading...                                                                                                                                                                  
+                .row.mt-4          
+                    .col
+                        a.btn.btn-outline-dark(href="/listings") View More Listings                                      
+
+
+    
+    script(type="text/javascript" src="/javascripts/student-dashboard.js")

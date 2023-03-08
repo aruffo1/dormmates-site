@@ -1,0 +1,36 @@
+extends ../layout/default
+block content
+    script(src='/javascripts/login.js')
+
+
+    body
+        .container.mt-5#success-container(hidden)
+            .p-2.text-center.bg-light 
+                h3 Successfully logged in!
+
+        .container.mt-5#login-container
+            .p-4.text-center.bg-light 
+                h4 Sign In
+            form#login-form.px-4.py-3
+                //- .d-grid.gap-2.col-4.mx-auto
+                //-     alert#alert.alert-danger(role='alert' hidden)
+                //-         strong#alert-message
+                //-         button.btn(type='button' data-bs-dismiss="alert")
+
+                .d-grid.gap-2.col-sm-4.mx-auto.mb-3
+                    .form-floating
+                        input#username.form-control(type='text' name="username" required)
+                        label.form-label(for='username') Username
+            
+                .d-grid.gap-2.col-sm-4.mx-auto.mb-3
+                    .form-floating
+                        input#password.form-control(type='password' name="password" required)
+                        label.form-label(for='password') Password
+                
+                .d-grid.gap-2.col-4.mx-auto.mb-3
+                    alert#alert.alert-danger(role='alert' hidden)
+                        strong#alert-message
+                        button.btn(type='button' data-bs-dismiss="alert")
+
+                .d-grid.gap-2.col-4.mx-auto.mb-3
+                    button.btn.btn-primary(type='submit') Sign in

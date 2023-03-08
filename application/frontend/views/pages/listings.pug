@@ -1,0 +1,93 @@
+extends ../layout/default
+block content
+    body
+        
+        input#home-lat(hidden readonly name="homeLat" value=user.student.institutionLatitude)
+        input#home-lng(hidden readonly name="homeLng" value=user.student.institutionLongitude)
+
+        #listings-container
+            .p-4.text-center 
+                h4 Listings Near 
+                    span=user.student.institutionName
+
+            .container
+                .row
+                    #filters-col.col-sm-12.col-md-2
+                        .card
+                            .card-body 
+                                h5.card-title Filters
+                                p.card-text Select the filters you want to apply to your listings.
+                                
+                                form#listing-filters
+                                    .form-check.form-check-inline
+                                        input#Dryer.form-check-input(type='checkbox' name="dryer" value='1')
+                                        label.form-check-label(for='Dryer')
+                                        | Dryer
+                                    .form-check.form-check-inline
+                                        input#Washer.form-check-input(type='checkbox' name="washer" value='1')
+                                        label.form-check-label(for='Washer')
+                                        | Washer
+                                    .form-check.form-check-inline
+                                        input#Whiteboard.form-check-input(type='checkbox' name="whiteboard" value='1')
+                                        label.form-check-label(for='Whiteboard')
+                                        | Whiteboard
+                                    .form-check.form-check-inline
+                                        input#Furnished.form-check-input(type='checkbox' name="furnished" value='1')
+                                        label.form-check-label(for='Furnished')
+                                        | Furnished
+                                    .form-check.form-check-inline
+                                        input#Patio.form-check-input(type='checkbox' name="patio" value='1')
+                                        label.form-check-label(for='Patio')
+                                        | Patio
+                                    .form-check.form-check-inline
+                                        input#Closets.form-check-input(type='checkbox' name="closet" value='1')
+                                        label.form-check-label(for='Closets')
+                                        | Closet
+                                    .form-check.form-check-inline
+                                        input#Parking.form-check-input(type='checkbox' name="parking" value='1')
+                                        label.form-check-label(for='Parking')
+                                        | Parking
+                                    .form-check.form-check-inline
+                                        input#Kitchen.form-check-input(type='checkbox' name="kitchen" value='1')
+                                        label.form-check-label(for='Kitchen')
+                                        | Kitchen
+                                    .form-check.form-check-inline
+                                        input#Bath.form-check-input(type='checkbox' name="bath" value='1')
+                                        label.form-check-label(for='Bath')
+                                        | Bath
+                                    .form-check.form-check-inline
+                                        input#LivingRoom.form-check-input(type='checkbox' name="livingroom" value='1')
+                                        label.form-check-label(for='LivingRoom')
+                                        | Living Room
+                                    .form-check.form-check-inline
+                                        input#Wifi.form-check-input(type='checkbox' name="wifi" value='1')
+                                        label.form-check-label(for='Wifi')
+                                        | Wifi
+                                    
+                                    br
+                                    br
+
+                                    button#submit-form-button.btn.btn-primary.d-block(href='/' type='submit') Apply
+
+
+                                //- .mb-3
+                                //-     label.form-label(for='exampleUsername') Price
+                                //-     input#exampleUsername.form-control(type='number' name="price" placeholder='Enter min $' aria-describedby='emailHelp')
+                                //-     input#exampleUsername.form-control(type='number' name="price" placeholder='Enter max $' aria-describedby='emailHelp')
+
+                    
+                    #listings-col.col-sm-12.col-md-3
+                        .d-flex.p-4.justify-content-center
+                            .spinner-border(role='status')
+                                span.visually-hidden Loading...
+                                                                           
+                    #map-col.col-sm-12.col-md-7
+                        #map
+
+                    
+
+    
+    // Importing leaflet
+    link(rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="")
+    script(src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin="")    
+    script(src="/javascripts/listings.js")

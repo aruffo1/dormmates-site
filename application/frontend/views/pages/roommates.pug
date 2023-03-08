@@ -1,0 +1,107 @@
+extends ../layout/default
+block content
+    //- script(type="text/javascript" src="/javascripts/dashboard.js")
+    link(rel="stylesheet", href="styles/style.css")
+    body
+            .p-4.text-center.bg-light 
+                h4 Students near 
+                    span=user.student.institutionName
+            
+            .container
+                
+                   
+                
+                .row 
+                    .col-sm-12.col-md-3
+                        .card.h-70.text-start
+                            .card-body    
+                                .text-center
+                                    h4 Filters
+                                    h6 Select the filters you want to apply to potential roommates.
+
+                                form#roommate-filters
+                                    p.mb-0.mt-3.text-secondary Schedule
+                                    small.mb-1.text-secondary Preferred schedule
+                                    select#schedule.form-control(type="text" name='schedule')
+                                        option(selected value="undefined") Select a schedule
+                                        option(value="daytime") Daytime
+                                        option(value="afternoon") Afternoon
+                                        option(value="nighttime") NightTime
+                                    p.mb-0.mt-3.text-secondary Major
+                                    small.mb-1.text-secondary Preferred major
+                                    select#major.form-control(type="text" name='major')
+                                        option(selected value="undefined") Select a major
+                                        option(value="computerScience") Computer Science 
+                                        option(value="physic") Physic 
+                                        option(value="mathematic") Mathematic 
+                                        option(value="biology") Biology 
+                                        option(value="businessManagement") Business Management 
+                                        option(value="business") Business 
+                                        option(value="accounting") Accounting 
+                                        option(value="nursing") Nursing 
+                                        option(value="psychology") Psychology 
+                                        option(value="communication") Communication 
+                                        option(value="marketing") Marketing 
+                                        option(value="generalEducation") General Education 
+                                        option(value="elementaryEducation") Elementary Education 
+                                        option(value="finance") Finance 
+                                        option(value="criminalJustice") Criminal Justice 
+                                        option(value="politicalScience") Political Science 
+                                        option(value="economics") Economics 
+                                        option(value="electricalEngineering") Electrical Engineering 
+                                        option(value="history") History 
+                                        option(value="liberalArts") Liberal Arts 
+                                        option(value="sociology") Sociology
+                                    p.mb-0.mt-3.text-secondary Personality
+                                    small.mb-1.text-secondary Preferred personality type
+                                    select#personality.form-control(type="text" name='personality')
+                                        option(selected value="undefined") Select a personality
+                                        option(value="architect") Architect
+                                        option(value="logician") Logician 
+                                        option(value="commander") Commander
+                                        option(value="debater") Debater
+                                        option(value="advocate") Advocate 
+                                        option(value="mediator") Mediator 
+                                        option(value="protagonist") Protagonist 
+                                        option(value="campaigner") Campaigner 
+                                        option(value="logistician") Logistician 
+                                        option(value="defender") Defender 
+                                        option(value="executive") Executive 
+                                        option(value="consul") Consul 
+                                        option(value="virtuoso") Virtuoso 
+                                        option(value="adventurer") Adventurer 
+                                        option(value="entrepreneur") Entrepreneur 
+                                        option(value="entertainer") Entertainer
+                                    p.mb-0.mt-3.text-secondary Hobby
+                                    small.mb-1.text-secondary Preferred hobby
+                                    select#hobby.form-control(type="text" name='hobby1')
+                                        option(selected value="undefined") Select a hobby
+                                        option(value="music") Music 
+                                        option(value="food") Food 
+                                        option(value="readingWriting") Reading and Writing 
+                                        option(value="travel") Traveling 
+                                        option(value="pets") Pets 
+                                        option(value="cooking") Cooking 
+                                        option(value="healthFitness") Health and Fitness 
+                                        option(value="socializing") Socializing 
+                                        option(value="sports") Sports 
+                                        option(value="artsCrafts") Arts and Crafts 
+                                        option(value="filmTv") Film and Television 
+                                        option(value="photography") Photography 
+                                        option(value="dancing") Dancing 
+                                        option(value="technology") Technology
+                                        option(value="gaming") Gaming 
+                                        option(value="gardening") Gardening
+                                        option(value="beauStyFashion") Beauty and Fashion
+
+                                    br
+                                    
+                                    button#submit-form-button.btn.btn-primary(href='/' type='submit') Search
+
+                    .col-sm-12.col-md-9
+                        .row#students-col
+                            .d-flex.justify-content-center
+                                .spinner-border(role='status')
+                                    span.visually-hidden Loading...
+                                                                                                                                                                               
+    script(src="javascripts/roommates.js")

@@ -1,0 +1,69 @@
+extends ../layout/default
+block content
+    script(type="text/javascript" src="/javascripts/home.js")
+
+    body 
+        .container.mt-5
+            .col
+                .row
+                    .col-md.py-2
+                        h1 Find your ideal roommate
+                        br
+                        h4 Match you with students near you that you are most likely to get along with!
+                    .col-md.py-2
+                        img.d-block.w-100(src='/images/friendship.gif')
+                        
+        .container 
+            .introsearch
+                .col-lg-12 
+                    .institution-search
+                        h1 Find Your University
+                        p Search for roommates or post new listings near a university.
+                        p.text-muted.small Currently only supporting Northern California.
+                        #institution-section(hidden)
+                            h4#selected-institution-message.mt-2
+                            .row
+                                .col.p-5
+                                    .card.text-black
+                                        .card-body
+                                            a.stretched-link(href="/register")
+                                            h3 Find awesome roommates
+                                            img.homepic(src='/images/findroom.svg')
+                                            p DormMates makes it extremely easy to find roommates that go to your university.
+                                .col.p-5
+                                    .card.text-black
+                                        .card-body
+                                            a.stretched-link(href="/register")
+                                            h3 Post your listing
+                                            img.homepic(src='/images/postlist.svg')
+                                            p DormMates provides an all inclusive platform for finding university leases.
+
+                        form#institution-search-form.searchbar(role='search')
+                            .form-group
+                                span.error(id='error')
+                                input.form-control(type='text' placeholder='Enter Institution Name' id='institution-search' autocomplete="off")
+                                ul.list-group(id='institution-search__searchField')
+
+        .container.mt-5
+            h1.text-center Why DormMates?
+            .row
+                article.col-md-4
+                    .position-relative.article-intro
+                        a.stretched-link(href="/features")
+                        h3 Messaging
+                        img.homepic(src='/images/groupchat.svg')
+                        p Connect with students who are also looking for housing and get to know them.
+
+                article.col-md-4
+                    .position-relative.article-intro
+                        a.stretched-link(href="/features")
+                        h3 Great Landlords
+                        img.homepic(src='/images/review.svg')
+                        p Have confidence in your landlord knowing that they are rated by previous students.
+                        
+                article.col-md-4
+                    .position-relative.article-intro
+                        a.stretched-link(href="/features")
+                        h3 Matchmaking 
+                        img.homepic(src='/images/match.svg')
+                        p Get matched with students who you are most likely to get along with.

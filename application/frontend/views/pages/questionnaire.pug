@@ -1,0 +1,302 @@
+extends ../layout/default
+block content
+    body
+        // Hidden ID input field used for making backend request.
+        input#id-field(hidden name="id" value=id readonly)
+
+        .container.mt-5#first-container
+            .p-3.text-center 
+                h4 When are you usually home?
+            #selection
+                .row.text-center   
+                    .col.p-5
+                        .card 
+                            .card-body 
+                                h3.card-title Daytime
+                                p.card-text Early bird
+                                .btn.btn-primary(role='button') 
+                                    i.fas.fa-coffeei.fas.fa-coffee.me-3
+                                    | Daytime
+                    .col.p-5
+                        .card 
+                            .card-body 
+                                h3.card-title Afternoon
+                                p.card-text Mid-day
+                                button.btn.btn-primary(role='button')
+                                    i.fas.fa-sun.me-3
+                                    | Afternoon
+                    .col.p-5
+                        .card 
+                            .card-body 
+                                h3.card-title Nighttime
+                                p.card-text Night owl
+                                button.btn.btn-primary(role='button')
+                                    i.fas.fa-moon.me-3 
+                                    | Nighttime
+
+        .container.mt-5#second-container(hidden)
+            .p-3.text-center 
+                h4 What is your personality type?
+
+            .btn-toolbar(role='toolbar' aria-label='Toolbar with button groups')
+                #second-selection    
+                    .row.text-center   
+                        .col-sm-12.col-md-3.d-flex.p-5 
+                            .card 
+                                .card-body 
+                                    h3.card-title Architect
+                                    p.card-text Imaginative and strategic thinkers, with a plan for everything.
+                                    button.btn.btn-primary() Architect
+                        .col-sm-12.col-md-3.d-flex.p-5
+                            .card 
+                                .card-body 
+                                    h3.card-title Logician
+                                    p.card-text Innovative inventors with an unquenchable thirst for knowledge.    
+                                    button.btn.btn-primary() Logician
+                        .col-sm-12.col-md-3.d-flex.p-5
+                            .card 
+                                .card-body 
+                                    h3.card-title Commander
+                                    p.card-text Bold, imaginative and strong-willed leaders, always finding a way – or making one.
+                                    button.btn.btn-primary() Commander
+                        .col-sm-12.col-md-3.d-flex.p-5
+                            .card 
+                                .card-body 
+                                    h3.card-title Debater
+                                    p.card-text Smart and curious thinkers who deconstruct and rebuild ideas with grea mentality.
+                                    button.btn.btn-primary() Debater
+                    
+                    .row.text-center
+                        .col-sm-12.col-md-3.d-flex.p-5
+                            .card 
+                                .card-body 
+                                    h3.card-title Advocate
+                                    p.card-text Quiet and mystical, yet very inspiring and tireless idealists.
+                                    button.btn.btn-primary() Advocate
+                        .col-sm-12.col-md-3.d-flex.p-5
+                            .card 
+                                .card-body 
+                                    h3.card-title Mediator
+                                    p.card-text Poetic, kind and altruistic people, always eager to help a good cause.
+                                    button.btn.btn-primary() Mediator
+                        .col-sm-12.col-md-3.d-flex.p-5
+                            .card 
+                                .card-body 
+                                    h3.card-title Protagonist
+                                    p.card-text Charismatic and inspiring leaders, able to mesmerize their listeners. 
+                                    button.btn.btn-primary() Protagonist
+                        .col-sm-12.col-md-3.d-flex.p-5
+                            .card 
+                                .card-body 
+                                    h3.card-title Campaigner
+                                    p.card-text Enthusiastic, creative and sociable free spirits, who can always find a reason to smile.            
+                                    button.btn.btn-primary() Campaigner
+                    .row.text-center
+                        .col-sm-12.col-md-3.d-flex.p-5
+                            .card 
+                                .card-body 
+                                    h3.card-title Logistician
+                                    p.card-text Practical and fact-minded individuals, whose reliability cannot be doubted.
+                                    button.btn.btn-primary() Logistician
+                        .col-sm-12.col-md-3.d-flex.p-5
+                            .card 
+                                .card-body 
+                                    h3.card-title Defender
+                                    p.card-text Very dedicated and warm protectors, always ready to defend their loved ones.
+                                    button.btn.btn-primary() Defender
+                        .col-sm-12.col-md-3.d-flex.p-5
+                            .card 
+                                .card-body 
+                                    h3.card-title Executive
+                                    p.card-text Excellent administrators, unsurpassed at managing things – or people.            
+                                    button.btn.btn-primary() Executive
+                        .col-sm-12.col-md-3.d-flex.p-5
+                            .card 
+                                .card-body 
+                                    h3.card-title Consul
+                                    p.card-text Extraordinarily caring, social and popular people, always eager to help.
+                                    button.btn.btn-primary() Consul
+                    .row.text-center
+                        .col-sm-12.col-md-3.d-flex.p-5
+                            .card 
+                                .card-body 
+                                    h3.card-title Virtuoso
+                                    p.card-text Bold and practical experimenters, masters of all kinds of tools. 
+                                    button.btn.btn-primary() Virtuoso
+                        .col-sm-12.col-md-3.d-flex.p-5
+                            .card 
+                                .card-body 
+                                    h3.card-title Adventurer
+                                    p.card-text Flexible and charming artists, always ready to explore and experience something new.
+                                    button.btn.btn-primary() Adventurer
+                        .col-sm-12.col-md-3.d-flex.p-5
+                            .card 
+                                .card-body 
+                                    h3.card-title Entrepreneur
+                                    p.card-text Smart, energetic and very perceptive people, who truly enjoy living on the edge.
+                                    button.btn.btn-primary() Entrepreneur
+                        .col-sm-12.col-md-3.d-flex.p-5
+                            .card 
+                                .card-body 
+                                    h3.card-title Entertainer
+                                    p.card-text Spontaneous, energetic and enthusiastic people – life is never boring around them.
+                                    button.btn.btn-primary() Entertainer
+
+        .container.mt-5#third-container(hidden)
+            .p-3.text-center
+                h4 What are your hobbies?
+
+            .btn-toolbar(role='toolbar' aria-label='Toolbar with button groups')
+                #third-selection    
+                    .row.text-center   
+                        .col-sm-12.col-md-3.d-flex.p-5 
+                            .card 
+                                .card-body 
+                                    h3.card-title Music
+                                    p.card-text You're passionate about making music, playing instruments, or simply listening to it.
+                                    button.btn.btn-primary() Music
+                        .col-sm-12.col-md-3.d-flex.p-5 
+                            .card 
+                                .card-body 
+                                    h3.card-title Food
+                                    p.card-text You're a gourmet who enjoys eating even when you aren't hungry.
+                                    button.btn.btn-primary() Food
+                        .col-sm-12.col-md-3.d-flex.p-5 
+                            .card 
+                                .card-body 
+                                    h3.card-title Reading and Writing
+                                    p.card-text You find yourself as a bookworm and a clever writer.
+                                    button.btn.btn-primary() Reading and Writing
+                        .col-sm-12.col-md-3.d-flex.p-5 
+                            .card 
+                                .card-body 
+                                    h3.card-title Traveling
+                                    p.card-text You often go on trips, exploring many new places.
+                                    button.btn.btn-primary() Traveling
+                    .row.text-center   
+                        .col-sm-12.col-md-3.d-flex.p-5 
+                            .card 
+                                .card-body 
+                                    h3.card-title Pets
+                                    p.card-text You treasure your pets and always do what's best for them.
+                                    button.btn.btn-primary() Pets
+                        .col-sm-12.col-md-3.d-flex.p-5 
+                            .card 
+                                .card-body 
+                                    h3.card-title Cooking
+                                    p.card-text You're often in the kitchen working on something delicious.
+                                    button.btn.btn-primary() Cooking
+                        .col-sm-12.col-md-3.d-flex.p-5 
+                            .card 
+                                .card-body 
+                                    h3.card-title Health and Fitness
+                                    p.card-text You're an active person who loves physical exercise and activities.           
+                                    button.btn.btn-primary() Health and Fitness
+                        .col-sm-12.col-md-3.d-flex.p-5 
+                            .card 
+                                .card-body 
+                                    h3.card-title Socializing
+                                    p.card-text You're a people person who prefers having the company of others.
+                                    button.btn.btn-primary() Socializing
+                    .row.text-center   
+                        .col-sm-12.col-md-3.d-flex.p-5 
+                            .card 
+                                .card-body 
+                                    h3.card-title Sports
+                                    p.card-text You're a team player that actively plays sports.
+                                    button.btn.btn-primary() Sports
+                        .col-sm-12.col-md-3.d-flex.p-5 
+                            .card 
+                                .card-body 
+                                    h3.card-title Arts and Crafts
+                                    p.card-text You show your creative side on the canvas.
+                                    button.btn.btn-primary() Arts and Crafts
+                        .col-sm-12.col-md-3.d-flex.p-5 
+                            .card 
+                                .card-body 
+                                    h3.card-title Film and Television
+                                    p.card-text Watching films and TV shows makes your days better. 
+                                    button.btn.btn-primary() Film and Television
+                        .col-sm-12.col-md-3.d-flex.p-5 
+                            .card 
+                                .card-body 
+                                    h3.card-title Photography
+                                    p.card-text You're usually behind the camera taking aesthetic photos.
+                                    button.btn.btn-primary()  Photography
+                    .row.text-center   
+                        .col-sm-12.col-md-3.d-flex.p-5 
+                            .card 
+                                .card-body 
+                                    h3.card-title Dancing
+                                    p.card-text Being a dancer is your ultimate stress reliever.
+                                    button.btn.btn-primary() Dancing
+                        .col-sm-12.col-md-3.d-flex.p-5 
+                            .card 
+                                .card-body 
+                                    h3.card-title Technology
+                                    p.card-text You're a tech savy person who finds comfort in anything technology.
+                                    button.btn.btn-primary() Technology
+                        .col-sm-12.col-md-3.d-flex.p-5 
+                            .card 
+                                .card-body 
+                                    h3.card-title Gaming
+                                    p.card-text You're a gamer who finds games to be the best form of entertainment.
+                                    button.btn.btn-primary() Gaming
+                        .col-sm-12.col-md-3.d-flex.p-5 
+                            .card 
+                                .card-body 
+                                    h3.card-title Gardening
+                                    p.card-text You're a gardener who treats any plant with the utmost care.
+                                    button.btn.btn-primary() Gardening
+
+        
+        .container.mt-5#fourth-container(hidden)
+            .p-3.text-center 
+                h4 What is your major?
+
+            .btn-toolbar(role='toolbar' aria-label='Toolbar with button groups')
+                .d-grid.gap-2.col-6.mx-auto#fourth-selection    
+                    .btn-group.mr-2(role='group' aria-label='First group')
+                        button.btn.btn-primary() Computer Science
+                        button.btn.btn-primary() Physic
+                        button.btn.btn-primary() Mathematic
+                        button.btn.btn-primary() Biology
+                    .btn-group.mr-3(role='group' aria-label='Second group')
+                        button.btn.btn-primary() Business Management
+                        button.btn.btn-primary() Business
+                        button.btn.btn-primary() Accounting
+                        button.btn.btn-primary() Nursing
+                    .btn-group(role='group' aria-label='Third group')
+                        button.btn.btn-primary() Psychology
+                        button.btn.btn-primary() Communication
+                        button.btn.btn-primary() Marketing
+                        button.btn.btn-primary() General Education
+                    .btn-group(role='group' aria-label='Fourth group')
+                        button.btn.btn-primary() Elementary Education
+                        button.btn.btn-primary() Finance
+                        button.btn.btn-primary() Criminal Justice
+                        button.btn.btn-primary() Political Science
+                    .btn-group(role='group' aria-label='Fifth group')
+                        button.btn.btn-primary() Economics 
+                        button.btn.btn-primary() Electrical Engineering 
+                        button.btn.btn-primary() History 
+                        button.btn.btn-primary() Liberal Arts
+                    .btn-group(role='group' aria-label='Fifth group')
+                        button.btn.btn-primary() Sociology
+
+
+        .container.mt-5#success-container(hidden)
+            .p-2.text-center
+                .mb-3 
+                    h3 Student questionnaire complete!
+                    a.btn.btn-primary(href='/login' type='button') Click here to login.
+                    
+        .container.mt-5#failure-container(hidden)
+            .p-2.text-center
+                .mb-3 
+                    h3 Sorry, an unexpected error occurred.
+                    a.btn.btn-primary(href='/questionnaire/'+id type='button') Try Again.
+                
+        script(type="text/javascript" src="/javascripts/questionnaire.js")
+                
+                

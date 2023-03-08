@@ -1,0 +1,84 @@
+extends ../layout/default 
+block content 
+    body
+        input#listing-id(hidden readonly name="listing-id" value=data.id)
+        if user.student
+            input#student-id(hidden readonly name="student-id" value=user.student.id)
+
+        .container.mt-5
+            h1.text-center Listing
+            br
+            .row
+                if photos
+                    each photo in photos
+                        .col.listingpic.mx-auto
+                            img(src=photo.photo height="300px")
+                else
+                    .col.listingpic
+                        .position-relative
+                            img.homepic(src="/images/a-room-at-the-beach.jpg" height="150px")
+            
+        br 
+        .row 
+            h3 Description
+            p=data.description
+            hr
+
+        .row
+            .col-sm-12.col-md-4.text-start
+                h3 Price
+                p=data.price
+            .col-sm-12.col-md-4.text-start
+                h3 Location
+                p=data.location
+            .col-sm-12.col-md-4.text-start
+                if user.student
+                    button#favorite-button.btn.btn-primary.float-end(onclick=`addToFavorites("${user.student.id}", "${data.id}")` hidden) Favorite 
+                        //- i.far.fa-star.ms-1
+                    //- br
+                    //- a.btn.btn-primary.float-end(href="/chat") Send Message
+                    h3=data.landlordName
+                    a(href=`/profile/${data.landlordUserId}`) Profile
+                    br
+                    img.homepic(src=data.landlordPhoto)
+                else if user.landlord && user.landlord.id == data.landlordId
+                    //- div
+                    a.btn.btn-primary.float-end(href=`/listing/edit/${data.id}`) Edit Listing
+                    //- div
+                    a.btn.btn-danger.float-end(href=`/soon`) Delete Listing
+
+        .row 
+            .col-md-4
+                h3 Amenities
+                if data.washer == 1
+                    p Washer 
+                if data.dryer == 1
+                    p Dryer
+                if data.wifi == 1
+                    p Wifi
+                if data.closet == 1
+                    p Closet 
+                if data.furnished == 1
+                    p Furnished
+                if data.kitchen == 1
+                    p Kitchen 
+                if data.whiteboard == 1
+                    p Whiteboard
+                if data.bath == 1
+                    p Bath
+                if data.livingroom == 1
+                    p Living Room
+                if data.patio == 1
+                    p Patio
+                if data.parking == 1
+                    p Parking
+                //- p=user.amenities
+            .col-md-4
+                h3 Availability
+                if data.availability == 1
+                    p Available now!
+                else
+                    p Not available
+    
+    if user.student
+        script(type="text/javascript" src="/javascripts/favorite.js")

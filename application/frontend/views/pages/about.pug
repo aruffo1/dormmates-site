@@ -1,0 +1,64 @@
+
+extends ../layout/default
+block content
+  -
+    var members = [
+      {
+        name: 'Andrei Georgescu',
+        title: "Team Lead",
+        avatar: '/images/andrei_profile_photo.png',
+        url: '/about/andrei'
+      },  
+      {
+        name: 'Jonathan McGrath',
+        title: "Backend Lead",
+        avatar: '/images/jonathan_photo.jpg',
+        url: '/about/jonathan'
+      },
+      {
+        name: 'Meeka Cayabyab',
+        title: "Frontend Lead",
+        avatar: '/images/meeka_profile_photo.jpg',
+        url: '/about/meeka'
+      },
+      {
+        name: 'Ahad Zafar',
+        title: "Engineer",
+        avatar: '/images/Ahad_profile.jpg',
+        url: '/about/ahad'
+      },
+      {
+        name: 'Jimmy Yeung',
+        title: "Engineer",
+        avatar: '/images/jimmy_profile_photo.png',
+        url: '/about/jimmy'
+      },   
+      {
+        name: 'Sayed Hamid',
+        title: "Engineer",
+        avatar: '/images/sayed.jpg',
+        url: '/about/Sayed'
+      },       
+      {
+        name: 'Alexandre Ruffo',
+        title: "Engineer",
+        avatar: '/images/alex_profile_photo.jpg',
+        url: '/about/alex'
+      },     
+    ]
+
+  h3.text-center.mt-5 Software Engineering class SFSU
+  h3.text-center Summer 2021
+  h3.text-center Section 4
+  h3.text-center Team 1
+  
+  .row.mt-5
+   each member in members
+    .col-sm-12.col-md-3
+      .card.card-flat.text-center.mb-4
+        img.rounded-circle.mx-auto.mt-3(height="100" width="100" src=member.avatar)
+        .card-body
+          a.stretched-link(href=member.url) 
+          h5.card-title=member.name
+          small.card-subtitle.text-muted=member.title
+          p.mt-2.card-text=member.description

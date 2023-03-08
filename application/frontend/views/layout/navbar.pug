@@ -1,0 +1,13 @@
+block navbar
+  nav.navbar.navbar-expanded-md
+    a.navbar-brand(href="/") DormMates
+    div.navbar-right
+      if user
+        a.navbar-dashboard(href="/dashboard" class="navlink") Dashboard
+        a.navbar-messages(href="/chat" class="navlink") Messages
+        a.navbar-profile(href="/profile" class="navlink") Profile
+        a.navbar-logout(href="#" onclick="logout()" class="navlink") Logout
+      else 
+        a.navbar-login(href="/login" class="navlink") Login
+        a.navbar-Register(href="/register" class="navlink") Register
+  script(src="/javascripts/logout.js")

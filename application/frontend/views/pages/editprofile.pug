@@ -1,0 +1,119 @@
+extends ../layout/default
+block content
+    body
+        #edit-profile.container.mt-5
+            .p-4.text-center.bg-light 
+                h4 Edit Profile
+                
+            form#edit-profile
+                .d-grid.gap-2.col-4.mx-auto.mb-3
+                    .form-floating
+                        input#fullName.form-control(type='text' name="name")
+                        label.form-label(for='fullName') Name
+                        small.form-text Enter your full name.
+                    
+                .d-grid.gap-2.col-4.mx-auto.mb-3
+                    .form-floating
+                        input#email.form-control(type='email' name="email")
+                        label.form-label(for='email') Email Address
+                        small#email-help-text.form-text
+
+                .d-grid.gap-2.col-4.mx-auto.mb-3
+                    .form-floating
+                        input#password.form-control(type='password' name="password")
+                        label.form-label(for='password') Password
+                        small.form-text Password must have at least 8 characters with at least one uppercase character and one number.
+
+                    
+                .d-grid.gap-2.col-4.mx-auto.mb-3
+                    .form-floating
+                        input#dob.form-control(type='text' name="dob")
+                        label.form-label(for='dob') Birth Date
+                        small.form-text Enter your birth date in the format YYYY-MM-DD.
+                
+                .d-grid.gap-2.col-4.mx-auto.mb-3
+                    label.form-label(for='gender') Gender
+                    select#gender.form-control(type="text" name='gender')
+                        option(value='male') Male 
+                        option(value='female') Female
+
+                .d-grid.gap-2.col-4.mx-auto.mb-3
+                    label.form-label(for='avatar') Avatar
+                    input#avatar.form-control-file(type='file' accept="image/jpeg" multiple="false" name="avatar")
+                    small.form-text Select a .jpeg or .jpg file.
+
+                .d-grid.gap-2.col-4.mx-auto.mb-3
+                    label.form-label(for='schedule') Schedule
+                    select#scheduleQ.form-control(type="text" name='schedule')
+                        option(value='daytime') Daytime
+                        option(value='afternoon') Afternoon 
+                        option(value='nightime') Nightime 
+
+                .d-grid.gap-2.col-4.mx-auto.mb-3
+                    label.form-label(for='personality') Personality
+                    select#personalityQ.form-control(type="text" name='personality')
+                        option(value='architect') Architect
+                        option(value='logician') Logician
+                        option(value='commander') Commander 
+                        option(value='debater') Debater 
+                        option(value='advocate') Advocate
+                        option(value='mediator') Mediator
+                        option(value='protagonist') Protagonist
+                        option(value='campaigner') Campaigner
+                        option(value='logistician') Logistician
+                        option(value='defender') Defender
+                        option(value='executive') Executive
+                        option(value='consul') Consul
+                        option(value='virtuoso') Virtuoso
+                        option(value='adventurer') Adventurer
+                        option(value='entrepreneur') Entrepreneur
+                        option(value='entertainer') Entertainer
+                
+                .d-grid.gap-2.col-4.mx-auto.mb-3
+                    label.form-label(for='hobby') Hobby
+                    select#hobbyQ.form-control(type="text" name='hobby')
+                        option(value='music') Music
+                        option(value='food') Food
+                        option(value='readingandwriting') Reading and Writing 
+                        option(value='traveling') Traveling
+                        option(value='pets') Pets
+                        option(value='cooking') Cooking
+                        option(value='healthandfitness') Health and Fitness
+                        option(value='socializing') Socializing
+                        option(value='sports') Sports
+                        option(value='artsandcrafts') Arts and Crafts
+                        option(value='filmandtelevision') Film and Television
+                        option(value='photography') Photography
+                        option(value='dancing') Dancing
+                        option(value='technology') Technology
+                        option(value='gaming') Gaming
+                        option(value='gardening') Gardening
+                        option(value='beauStyFashion') Beauty and Fashion
+                
+                .d-grid.gap-2.col-4.mx-auto.mb-3
+                    label.form-label(for='major') Major
+                    select#hobbyQ.form-control(type="text" name='hobby')
+                        option(value='computerscience') Computer Science
+                        option(value='physic') Physic
+                        option(value='mathematic') Mathematic
+                        option(value='biology') Biology
+                        option(value='businessmanagement') Business Management
+                        option(value='business') Business
+                        option(value='accounting') Accounting
+                        option(value='nursing') Nursing
+                        option(value='psychology') Psychology
+                        option(value='communication') Communication
+                        option(value='marketing') Marketing
+                        option(value='generaleducation') General Education
+                        option(value='elementaryeducation') Elementary Education
+                        option(value='finance') Finance
+                        option(value='criminaljustice') Criminal Justice
+                        option(value='politicalscience') Political Science
+                        option(value='economics') Economics
+                        option(value='electricalengineering') Electrical Engineering 
+                        option(value='history') History
+                        option(value='liberalarts') Liberal Arts
+                        option(value='sociology') Sociology
+
+                .d-grid.gap-2.col-4.mx-auto.mb-3
+                    button#submit-form-button.btn.btn-primary.bg-primary(href='/' type='submit') Submit
